@@ -1,0 +1,29 @@
+<script setup>
+defineProps({
+    banner: Object
+})
+</script>
+<template>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" :data-slide-to="row.id" v-for="(row, index) in banner"
+                :key="row.id" :class="{ active: index === 0 }"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item" v-for="(row, index) in banner" :key="row.id" :class="{ active: index === 1 }">
+                <img :src="row.gambar" class="d-block w-100" :alt="row.judul">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{ row.judul }}</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>
+</template>
