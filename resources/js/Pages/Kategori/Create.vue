@@ -45,7 +45,7 @@ const submit = () => {
                 </div>
             </div>
             <div class="card-footer text-center">
-                <ButtonSimpan />
+                <ButtonSimpan :disabled="form.processing" />
             </div>
         </form>
     </div>
