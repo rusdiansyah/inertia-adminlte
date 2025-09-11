@@ -22,10 +22,10 @@ const getDate = (date) =>
             <h5 class="card-title pt-2">{{ row.judul }}</h5>
         </div>
         <div class="card-footer">
-            <Link :href="route('kategori', row.kategori.slug)" class="btn btn-info float-left">
+            <Link :href="route('kategori-berita', row.kategori.slug)" class="btn btn-info float-left">
             <i class="fas fa-tag"></i> {{ row.kategori.nama }}
             </Link>
-            <Link :href="route('berita', row.slug)" class="btn btn-primary float-right">
+            <Link :href="route('berita-detail', row.slug)" class="btn btn-primary float-right">
             <i class="fas fa-align-justify"></i> Selengapnya ...
             </Link>
         </div>

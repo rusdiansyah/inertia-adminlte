@@ -43,7 +43,7 @@ defineProps({
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" v-for="bt in beritaTerkait" :key="bt.id">
-                           <Link :href="route('berita',bt.slug)">
+                           <Link :href="route('berita-detail',bt.slug)">
                             {{ bt.judul }}
                             </Link>
                         </li>

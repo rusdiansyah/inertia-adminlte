@@ -33,7 +33,7 @@ Route::get('/',function(Request $request){
     ]);
 })->name('home');
 
-Route::get('/kategori/{slug}',function($slug){
+Route::get('/kategori-berita/{slug}',function($slug){
     $kategori = Kategori::where('slug',$slug)->first();
     $berita = Berita::whereHas('kategori',function($q)use($slug){
         $q->where('slug',$slug);
@@ -45,9 +45,9 @@ Route::get('/kategori/{slug}',function($slug){
         'berita' => $berita,
         'kategori' => $kategori,
     ]);
-})->name('kategori');
+})->name('kategori-berita');
 
-Route::get('/berita/{slug}', function ($slug) {
+Route::get('/berita-detail/{slug}', function ($slug) {
 
     $berita = Berita::where('slug',$slug)
         ->with(['kategori', 'user'])
@@ -66,7 +66,7 @@ Route::get('/berita/{slug}', function ($slug) {
         'berita' => $berita,
         'beritaTerkait' => $beritaTerkait,
     ]);
-})->name('berita');
+})->name('berita-detail');
 
 Route::get('/login', function () {
     return Inertia::render('Login');

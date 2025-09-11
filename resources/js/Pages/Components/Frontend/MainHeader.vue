@@ -55,7 +55,7 @@ watch(
             >
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               <li v-for="row in $page.props.listKategori" :key="row.id">
-                <Link :href="route('kategori',row.slug)" class="dropdown-item">{{ row.nama }} </Link>
+                <Link :href="route('kategori-berita',row.slug)" class="dropdown-item">{{ row.nama }} </Link>
               </li>
             </ul>
           </li>

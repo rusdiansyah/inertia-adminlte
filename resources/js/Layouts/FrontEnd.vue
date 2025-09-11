@@ -13,25 +13,18 @@ defineProps({
             <MainHeader />
 
             <div class="content-wrapper">
-                <!-- Content Header (Page header) -->
                 <div class="content-header">
                     <div class="container">
                         <Carousel :banner="banner" />
-                    </div><!-- /.container-fluid -->
+                    </div>
                 </div>
-                <!-- /.content-header -->
 
-                <!-- Main content -->
                 <div class="content">
                     <div class="container">
                         <slot />
-                        <!-- /.row -->
-                    </div><!-- /.container-fluid -->
+                    </div>
                 </div>
-                <!-- /.content -->
             </div>
-
-            <!-- Main Footer -->
             <Footer />
         </div>
     </body>
