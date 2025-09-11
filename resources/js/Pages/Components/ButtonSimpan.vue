@@ -12,7 +12,7 @@ defineProps({
 });
 </script>
 <template>
-    <button :type="type" class="btn bg-gradient-primary">
+    <button :type="type" class="btn bg-gradient-primary" :disabled="form.processing">
         <i class="fas fa-save"></i> {{ label }}
     </button>
 </template>
