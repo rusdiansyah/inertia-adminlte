@@ -35,10 +35,8 @@ const berita = ["Kategori/Index", "Berita/Index"];
                     <NavItem routeName="dashboard" componentName="Dashboard" icon="fa-tachometer-alt">
                         Dashboard
                     </NavItem>
-                    <!-- :class="{'menu-open' : config.includes($page.component) }" -->
-                    <li class="nav-item">
-                        <!-- :class="{'active' : config.includes($page.component) }" -->
-                        <a href="#" class="nav-link">
+                    <li class="nav-item" :class="{'menu-open' : config.includes($page.component) }">
+                        <a href="#" class="nav-link" :class="{'active' : config.includes($page.component) }">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>
                                 Config
@@ -58,8 +56,8 @@ const berita = ["Kategori/Index", "Berita/Index"];
                         </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item" :class="{'menu-open' : berita.includes($page.component) }">
+                        <a href="#" class="nav-link" :class="{'active' : berita.includes($page.component) }">
                             <i class="nav-icon fas fa-newspaper"></i>
                             <p>
                                 Berita

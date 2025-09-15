@@ -11,7 +11,7 @@ defineProps({
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item" v-for="(row, index) in banner" :key="row.id" :class="{ active: index === 1 }">
-                <img :src="row.gambar" class="d-block w-100" :alt="row.judul">
+                <img :src="'storage/'+row.gambar" class="d-block w-100" :alt="row.judul">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{ row.judul }}</h5>
                 </div>

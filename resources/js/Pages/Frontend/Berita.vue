@@ -37,7 +37,7 @@ defineProps({
                 <CardDetail :berita="berita" />
             </div>
             <div class="col-md-3">
-                <div class="card card-primary" style="width: 18rem;">
+                <div class="card" style="width: 18rem;" :class="$page.props.cardColor">
                     <div class="card-header">
                         Link Terkait
                     </div>

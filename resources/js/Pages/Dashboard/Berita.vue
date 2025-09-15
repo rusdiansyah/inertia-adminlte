@@ -6,7 +6,7 @@ defineProps ({
 <template>
     <div class="row">
         <div class="col-12">
-            <div class="card">
+            <div class="card" :class="$page.props.cardColor">
                 <div class="card-header border-0">
                     <h3 class="card-title">Berita Terpopuler</h3>
                 </div>
@@ -42,7 +42,7 @@ defineProps ({
                                     {{ row.diklik }}
                                 </td>
                                 <td>
-                                    <a href="#" class="text-muted">
+                                    <a :href="'/berita-detail/'+row.slug" class="text-muted" target="_blank">
                                         <i class="fas fa-search"></i>
                                     </a>
                                 </td>

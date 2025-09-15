@@ -10,7 +10,7 @@ defineProps({
 <template>
     <Head :title="title" />
     <div class="col-12">
-        <div class="card">
+        <div class="card" :class="$page.props.cardColor">
             <div class="card-header border-0">
                 <h3 class="card-title">{{ title }}</h3>
                 <div class="card-tools">

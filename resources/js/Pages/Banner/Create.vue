@@ -27,7 +27,7 @@ const submit = () => {
 <template>
 
     <Head :title="props.title" />
-    <div class="card">
+    <div class="card" :class="$page.props.cardColor">
         <div class="card-header border-0">
             <h3 class="card-title">{{ props.title }}</h3>
             <div class="card-tools">

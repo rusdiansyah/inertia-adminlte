@@ -41,6 +41,7 @@ class HandleInertiaRequests extends Middleware
             'appName' => config('app.name'),
             'website' => 'https://deddydev.com',
             'programmer' => 'Deddy Rusdiansyah',
+            'cardColor' => 'card-primary',
             'auth.user' => fn() => $request->user()
                 ? $request->user()->only('id', 'name', 'email','role','avatar')
                 : null,
